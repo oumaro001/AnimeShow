@@ -2,9 +2,9 @@ export class MangasModel {
    
     constructor(
         public name: string,
-        public author: any,
-        public img_mangas: any,
-        public img_tome: any,
+        public author: string,
+        public img_mangas: string,
+        public img_tome: string,
          public price: any, 
          public nbr_tome: any, 
          public stock: any,

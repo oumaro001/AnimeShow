@@ -1,0 +1,37 @@
+<header><img src="../../../assets/Logos/Anime show (1).gif" alt="logo anime show">
+
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav d-flex">
+          <a class="nav-link" href="#"><i class="fa fa-person"></i> Utilisateur</a>
+          <a class="nav-link" (click)="getAllManags()"><i class="fa fa-book"></i> Mangas</a>
+          <a class="nav-link" href="#"><i class="fa fa-table"></i> Commande</a>
+          <a class="nav-link" href="#">Deconnexion</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+  <section *ngIf="mangasList">
+    <div *ngFor="let mangas of arrayMangas">
+    <div class="card mb-3" style="width: 18rem;">
+        <img src="{{mangas.img_mangas}}" class="card-img-top" alt="{{mangas.name}}">
+        <div class="card-body">
+            <p class="card-text"><span>Nom</span> : {{mangas.name}}</p>
+            <p class="card-text"><span>Auteur</span> : {{mangas.author}}</p>
+          <p class="card-text"><span>Nombre de tome </span> {{mangas.nbr_tome}}</p>
+          <p class="card-text"><span>Nombre de like</span> : {{mangas.likes}}</p>
+          <p class="card-text"><span>Date de sortie </span> {{mangas.release_date}}</p>
+          <p class="card-text"><span>Stock</span> : {{mangas.stock}}</p>
+        </div>
+        <button class="btn btn-primary m-1"><i class="fa fa-eye"></i></button>
+      </div>
+    </div>
+  </section>

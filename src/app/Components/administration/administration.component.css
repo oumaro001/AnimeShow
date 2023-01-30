@@ -1,0 +1,45 @@
+header{
+    background-color: black !important;
+    height: 250px;
+    width: 100%;
+    
+}
+
+header > img {
+    display: flex;
+    justify-content: center;
+    width: 15em;
+    height: 15em;
+    margin: auto;
+}
+nav{
+
+    background-color: black !important;
+}
+
+a{
+    color: white !important;
+    cursor: pointer;
+
+}
+
+span{
+    color: red;
+}
+
+section{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin: 100px 20px;
+}
+
+section + div{
+    transition: 2s;
+
+}
+.card:hover{
+    transform: scale(1.2);
+    border: 2px solid red;
+    transition: 1.5s;
+}
