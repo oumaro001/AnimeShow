@@ -20,6 +20,11 @@ export class AnimeApiService{
 
     return this.http.get(baseUrl)
   }
+
+  getMangasById(id : string): Observable<any>{
+
+    return this.http.get(baseUrl+id)
+  }
   
 }
 

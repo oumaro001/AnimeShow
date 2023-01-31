@@ -26,7 +26,14 @@ getAllManags(){
     console.log(this.arrayMangas);
     
   })
-
  
+}
+
+getMangasById(id :string){
+
+  this.mangasService.getMangasById(id).subscribe(response =>{
+        //creation de composent MangasId
+        // creation  de la route
+  })
 }
 }
