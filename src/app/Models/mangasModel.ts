@@ -1,6 +1,7 @@
 export class MangasModel {
    
     constructor(
+        public id : string,
         public name: string,
         public author: string,
         public img_mangas: string,
@@ -14,6 +15,7 @@ export class MangasModel {
          )
 
     {
+        
         this.name = name;
         this.name = name;
         this.author =author;

@@ -1,18 +1,21 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { MangasModel } from 'src/app/Models/mangasModel';
 import { AnimeApiService } from 'src/app/Services/Anime_Api/animeApi.service';
+
 
 @Component({
   selector: 'app-administration',
   templateUrl: './administration.component.html',
   styleUrls: ['./administration.component.css']
 })
+
 export class AdministrationComponent implements OnInit {
-  public arrayMangas: MangasModel [] = [];
+  public arrayMangas: any [] = [];
   public mangasList = false;
   public userList = false;
 
-  constructor(private mangasService : AnimeApiService ) { 
+  constructor(private mangasService : AnimeApiService,private route : Router) { 
   }
   ngOnInit(): void {
   }
@@ -31,9 +34,13 @@ getAllManags(){
 
 getMangasById(id :string){
 
-  this.mangasService.getMangasById(id).subscribe(response =>{
-        //creation de composent MangasId
-        // creation  de la route
-  })
+  console.log(id);
+  
+  /*let result = this.mangasService.getMangasById(id).subscribe(response =>{
+       console.log(response);
+       result = response;   
+  })*/
+
+  this.route.navigate(['mangasById/', id]);
 }
 }

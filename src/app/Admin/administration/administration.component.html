@@ -20,7 +20,7 @@
 
 
   <section *ngIf="mangasList">
-    <div *ngFor="let mangas of arrayMangas">
+    <div *ngFor="let mangas of arrayMangas let i = index">
     <div class="card mb-3" style="width: 18rem;">
         <img src="{{mangas.img_mangas}}" class="card-img-top" alt="{{mangas.name}}">
         <div class="card-body">
@@ -31,7 +31,7 @@
           <p class="card-text"><span>Date de sortie </span> {{mangas.release_date}}</p>
           <p class="card-text"><span>Stock</span> : {{mangas.stock}}</p>
         </div>
-        <button class="btn btn-primary m-1"><i class="fa fa-eye"></i></button>
+        <button class="btn btn-primary m-1"(click)="getMangasById(mangas._id)" ><i class="fa fa-eye"></i></button>
       </div>
     </div>
   </section>

@@ -1,0 +1,19 @@
+header{
+
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header , h1 , p  {
+    text-align: center;
+}
+
+h1{
+    font-size: 4em;
+}
+
+#block_title{
+    width: 100%;
+}

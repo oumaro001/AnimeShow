@@ -1,0 +1,38 @@
+<header class="d-flex justify-content-center" style="background-image: url({{Mangas.img_mangas}});">
+</header>
+<div class="d-flex flex-column" id="block_title">
+    <h1>{{Mangas.name}}</h1>
+    <p>{{Mangas.author}}</p>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="table-primary">Id</th>
+        <th scope="col" class="table-danger">Nom</th>
+        <th scope="col" class="table-secondary">Auteur</th>
+        <th scope="col" class="table-success">Date de sortie</th>
+        <th scope="col" class="table-warning">Image d'affiche</th>
+        <th scope="col" class="table-light">Prix</th>
+        <th scope="col" class="table-dark">Stock</th>
+        <th scope="col" class="table-primary">Image des tomes</th>
+        <th scope="col" class="table-warning">Likes</th>
+        <th scope="col" class="table-danger  d-flex flex-wrap">Resume du mangas</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{Mangas._id}}</th>
+        <td>{{Mangas.name}}</td>
+        <td>{{Mangas.author}}</td>
+        <td>{{Mangas.release_date}}</td>
+        <td>{{Mangas.img_mangas}}</td>
+        <td>{{Mangas.price}}</td>
+        <td>{{Mangas.stock}}</td>
+        <td>{{Mangas.img_tome}}</td>
+        <td>{{Mangas.likes}}</td>
+        <td>{{Mangas.resume}</td>
+      </tr>
+    </tbody>
+  </table>
